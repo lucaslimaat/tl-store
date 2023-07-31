@@ -14,7 +14,7 @@ export default function LigasCard({
 }: LigasCardProps) {
   return (
     <motion.div
-      className="relative flex flex-col items-center justify-center border-solid border-2  border-blue  px-5  bg-neutral-100 pb-4 select-none will-change-transform [&:not(:first-child)]:absolute h-96 w-64"
+      className="relative flex flex-col items-center justify-center border-solid border-2  border-blue  px-5  bg-neutral-100 pb-4 select-none will-change-transform [&:not(:first-child)]:absolute w-64 h-80"
       style={style}
     >
       <Image
