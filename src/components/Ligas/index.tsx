@@ -100,7 +100,7 @@ export default function LigasList() {
 
   return (
     <motion.div
-      className="relative bg-white py-8 pt-16 pb-4 overflow-x-hidden overflow-y-visible select-none touch-none"
+      className="relative bg-white py-4 pb-4 overflow-x-hidden overflow-y-visible select-none touch-none"
       onPan={handlePan}
       onPanEnd={(e, point) => handlePan(e, point, true)}
     >

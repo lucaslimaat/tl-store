@@ -9,19 +9,27 @@ const mod = (a: number, n: number) => ((a % n) + n) % n
 const lancamentosList = [
   {
     image: '/images/teste-lancamento.svg',
-    link: 'teste'
+    link: 'teste',
+    name: 'Camisa 2 Barcelona 2022/2023',
+    price: 'R$140,00'
   },
   {
     image: '/images/teste2-lancamento.svg',
-    link: 'teste'
+    link: 'teste',
+    name: 'Camisa 2 Barcelona 2022/2023',
+    price: 'R$140,00'
   },
   {
     image: '/images/teste-lancamento.svg',
-    link: 'teste'
+    link: 'teste',
+    name: 'Camisa 2 Barcelona 2022/2023',
+    price: 'R$140,00'
   },
   {
     image: '/images/teste-lancamento.svg',
-    link: 'teste'
+    link: 'teste',
+    name: 'Camisa 2 Barcelona 2022/2023',
+    price: 'R$140,00'
   },
 ]
 
@@ -104,18 +112,20 @@ export default function LancamentosList() {
 
   return (
     <motion.div
-      className="relative bg-white py-8 pt-16 pb-4 overflow-x-hidden overflow-y-visible select-none touch-none"
+      className="relative bg-white  pb-20 overflow-x-hidden overflow-y-visible select-none touch-none flex flex-col justify-center items-center"
       onPan={handlePan}
       onPanEnd={(e, point) => handlePan(e, point, true)}
     >
-       <h3 className="md:text-4xl text-2xl font-bold text-center pb-10">
-        Nossos Serviços
+       <h3 className="md:text-4xl text-2xl font-bold text-center py-10 text-black">
+        Lançamentos
       </h3>
       <div className="relative flex gap-3 justify-center items-center">
         {lancamentosCards.map(({ lancamentos, index, ...style }) => (
           <LancamentosCard
             key={index}
             style={style}
+            name={lancamentos.name}
+            price={lancamentos.price}
             link={lancamentos.link}
             image={lancamentos.image}
           />

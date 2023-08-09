@@ -3,6 +3,8 @@ import Image from 'next/image'
 
 interface LancamentosCardProps {
   image: string
+  name: string
+  price: string
   link: string
   style: {
     x: MotionValue<number>
@@ -11,6 +13,8 @@ interface LancamentosCardProps {
 
 export default function LancamentosCard({
   image,
+  name,
+  price,
   link,
   style,
 }: LancamentosCardProps) {
@@ -33,6 +37,8 @@ export default function LancamentosCard({
       <div className="w-full h-64 bg-gradient-to-b from-transparent to-neutral-900 absolute top-12 ">
 
       </div>
+      <p className="absolute top-52">{name}</p>
+      <p className="absolute top-56 left-2">{price}</p>
       <div className="h-8 bg-black w-60 absolute flex flex-row items-center justify-center top-64">
         <a href={link} className="">
             Confira todos os detalhes
